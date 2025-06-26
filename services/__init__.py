@@ -13,9 +13,11 @@ from .spotify_service import (
     exchange_spotify_token,
 )
 from .facebook_service import (
-    get_facebook_auth_url,
-    exchange_facebook_token,
-    get_page_insights
+    fetch_graph,
+    get_instagram_metadata,
+    get_facebook_metadata,
+    get_combined_insights,
+    
 )
 
 # Explicit module exports
