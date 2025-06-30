@@ -38,7 +38,7 @@ class ActivityInsights(BaseModel):
 # Import the service
 from services.beehiiv_service import BeehiivService
 
-router = APIRouter(prefix="/newsletter", tags=["Newsletter"])
+router = APIRouter()
 
 def get_service() -> BeehiivService:
     """Get BeehiivService instance from environment variables"""
