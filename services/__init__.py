@@ -20,6 +20,11 @@ from .facebook_service import (
     
 )
 
+# Export essential services related to Beehiiv newsletter analytics
+from .beehiiv_service import (
+    BeehiivService,
+
+)
 # Explicit module exports
 __all__ = [
     # Token Service
@@ -38,5 +43,10 @@ __all__ = [
     # Facebook Service
     "get_facebook_auth_url",
     "exchange_facebook_token",
-    "get_page_insights"
+    "get_page_insights",
+    "BeehiivService",
+    "SubscriptionStatus", 
+    "SubscriptionTier",
+    "SubscriptionStats",
+    "GeneralizedStats",
 ]

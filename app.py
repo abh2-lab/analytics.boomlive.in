@@ -4,7 +4,7 @@ from starlette.middleware.sessions import SessionMiddleware
 import os
 from dotenv import load_dotenv
 
-from routers import auth_router, facebook_router, google_router, spotify_router
+from routers import auth_router, facebook_router, google_router, spotify_router, beehiiv_router
 
 # Load environment variables
 load_dotenv()
@@ -34,7 +34,7 @@ app.include_router(facebook_router, prefix="/facebook", tags=["Facebook Insights
 # Commented out for now
 app.include_router(spotify_router, prefix="/spotify", tags=["Spotify Analysis"])
 app.include_router(google_router, prefix="/google", tags=["Google Analytics & YouTube"])
-
+app.include_router(beehiiv_router.router, prefix="/newsletter", tags=["Newsletter Analytics"])
 @app.get("/")
 async def root():
     """
