@@ -32,7 +32,7 @@ app.include_router(auth_router, prefix="/auth", tags=["Authentication"])
 app.include_router(facebook_router, prefix="/facebook", tags=["Facebook Insights"])
 
 # Commented out for now
-app.include_router(spotify_router, prefix="/spotify", tags=["Spotify Analysis"])
+# app.include_router(spotify_router, prefix="/spotify", tags=["Spotify Analysis"])
 app.include_router(google_router, prefix="/google", tags=["Google Analytics & YouTube"])
 app.include_router(beehiiv_router.router, prefix="/newsletter", tags=["Newsletter Analytics"])
 @app.get("/")
