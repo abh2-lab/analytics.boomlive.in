@@ -4,7 +4,7 @@ from starlette.middleware.sessions import SessionMiddleware
 import os
 from dotenv import load_dotenv
 
-from routers import auth_router, facebook_router, google_router, spotify_router, beehiiv_router
+from routers import auth_router, facebook_router, google_router, spotify_router, beehiiv_router, auth_router2
 
 # Load environment variables
 load_dotenv()
@@ -29,6 +29,8 @@ app.add_middleware(
 
 # Include routers for authentication and Facebook services
 app.include_router(auth_router, prefix="/auth", tags=["Authentication"])
+app.include_router(auth_router2.router, prefix="/auth2", tags=["Authentication2"])
+
 app.include_router(facebook_router, prefix="/facebook", tags=["Facebook Insights"])
 
 # Commented out for now
